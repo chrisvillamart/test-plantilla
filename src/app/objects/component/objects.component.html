@@ -1,0 +1,24 @@
+<div style="padding: 13px;">
+  <!-- Mostramos un spinner de carga a lo que se obtiene la información -->
+    <mat-spinner *ngIf="users.length === 0"></mat-spinner>
+  <!-- Recorremos el objeto con los usuarios -->
+  <!-- Se añade mat-ripple para mostrar un efecto al hacer clic al card con la información -->
+    <mat-card  mat-ripple *ngFor="let users of users" style="margin-top:10px;" >
+        <mat-card-header>
+            <mat-card-title>{{users.name}}</mat-card-title>
+            <mat-card-subtitle>Usuario : {{users.username}}/ Email: {{users.email}}
+            </mat-card-subtitle>
+        </mat-card-header>
+            <mat-card-content><b>Teléfono: </b>{{users.phone}}</mat-card-content>
+            <mat-card-content><b>Sitio web: </b>{{users.website}}</mat-card-content>
+            <mat-card-content><b>Calle: </b>{{users.address.street}}</mat-card-content>
+            <mat-card-content><b>Dpto: </b>{{users.address.suite}}</mat-card-content>
+            <mat-card-content><b>Ciudad: </b>{{users.address.city}}</mat-card-content>
+            <mat-card-content><b>Código postal: </b>{{users.address.zipcode}}</mat-card-content>
+            <mat-card-content><b>Latitud: </b>{{users.address.geo.lat}}</mat-card-content>
+            <mat-card-content><b>Longitud: </b>{{users.address.geo.lng}}</mat-card-content>
+            <mat-card-content><b>Nombre de compañia: </b>{{users.company.name}}</mat-card-content>
+            <mat-card-content><b>Frase: </b>{{users.company.catchPhrase}}</mat-card-content>
+            <mat-card-content><b>Rubro: </b>{{users.company.bs}}</mat-card-content>      
+    </mat-card>
+</div>

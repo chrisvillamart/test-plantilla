@@ -1,0 +1,50 @@
+<div class="fixed-layout">
+    <table class="centered-table">
+        <tr>
+            <td>
+            <mat-card>
+                <mat-card-header>
+                  <mat-card-title>Login</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <form class="form-group">
+                    <table class="example-full-width" cellspacing="0">
+                      <tr>
+                        <td>             
+                          <mat-form-field class="example-full-width" appearance="outline">
+                          <input matInput placeholder="Correo o username" [(ngModel)]="username" name="username" required>
+                          <span matPrefix>
+                            <mat-icon class="amber-600-fg" matTooltip="username">person_outline</mat-icon>
+                          </span>            
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                      <td>
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput placeholder="Contraseña" [(ngModel)]="password"type="password" name="password" required>
+                        <span matPrefix>
+                            <mat-icon class="amber-600-fg" matTooltip="password">vpn_key</mat-icon>
+                          </span>    
+                          <span matSuffix>
+                            <mat-icon class="amber-600-fg" matTooltip="view">visibility</mat-icon>
+                          </span>    
+                      </mat-form-field></td>
+                    </tr>
+                    <tr>
+                      <td><mat-error *ngIf="loginInvalid">Credenciales incorrectas</mat-error></td>
+                    </tr>
+                </table>
+                  </form> 
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-raised-button (click)="login()" color="primary">Iniciar sesión</button>
+                </mat-card-actions>
+             </mat-card>
+            </td>
+      <td>
+        <img class = "img-responsive" src="\assets\image.jpg"> 
+      </td>     
+        </tr>
+    </table>
+</div>
